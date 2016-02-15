@@ -9,16 +9,30 @@
 		<div class="container">
 		<div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-lg-4 col-lg-offset-4 books">
 			<h1>Book Shelf</h1>
+			<h3>Add Book</h3>
 				<form>
-						<!-- form to add book -->
-				</form>
-
+            <div class="form-group">
+              <input type="text" class="form-control" id="book-title" placeholder="Title" required autofocus>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="book-genre" placeholder="Genre" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="book-author" placeholder="Author" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-sm">Add Book</button>
+          </form>
+          <br>
 			<ul id="books">
+				<h3>My Books</h3>
 				<!-- all books, title and data, button to read book, button to  -->
 			</ul>
+			<h3>Currently Reading...</h3>
+			<div id="current">None</div>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="dom.js"></script>
 </body>
 </html>

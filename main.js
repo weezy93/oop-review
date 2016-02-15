@@ -54,8 +54,15 @@ BookList.prototype.startCurrentBook = function(){
 
 BookList.prototype.renderToDom = function(){
 	for (var i = 0; i < this.bookArr.length; i++) {
-		$("ul").append('<li>' + this.bookArr[i].title + '</li>');
+
+		$("#books").append("<li>" +
+			this.bookArr[i].title +
+			"&nbsp; &nbsp;"+
+			this.bookArr[i].read +
+			"</li>");
 	}
+
+	$("#books").append("<br><button id='read' class='btn btn-success' btn-xs'>Read Next Book</button>");
 };
 
 
@@ -93,7 +100,7 @@ myBooks.addBook(book2);
 myBooks.addBook(book3);
 myBooks.addBook(book4);
 myBooks.finishCurrentBook();
-myBooks.renderToDom();
+
 
 // console.log(myBooks);
 
